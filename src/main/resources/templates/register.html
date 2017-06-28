@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head('Register form')" />
+<body>
+
+<nav th:replace="fragments :: my-navbar" />
+
+<div class="container">
+    <div class="row">
+        <div id="addYourDetails">
+        <h3>ADD YOUR DETAILS</h3>
+        </div>
+            <div class="col l8 offset-l2">
+            <form th:action="@{/users/register}" th:method="POST" th:object="${user}">
+                <label id="usernameLbl" for="username">Username</label>
+                <!--<input id="username" class="form-control" th:field="*{username}" />-->
+                <input id="username" th:field="*{username}" />
+
+
+                <label id="emailLbl" for="email">Email</label>
+                <!--<input id="email" class="form-control" th:field="*{email}" />-->
+                <input id="email" th:field="*{email}" />
+
+
+                <label id="passwordLbl" for="password">Password</label>
+                <!--<input id="password" type="password" class="form-control" th:field="*{password}" />-->
+                <input id="password" type="password" th:field="*{password}" />
+
+
+                <br/>
+                <input class="btn" type="submit" />
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

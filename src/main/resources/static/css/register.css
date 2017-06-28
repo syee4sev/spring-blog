@@ -1,0 +1,16 @@
+#username{
+    width: 200px;
+}
+
+#email{
+    width: 200px;
+}
+
+#password{
+    width: 200px;
+}
+
+#addYourDetails{
+    background-color: black;
+    color: white;
+}
